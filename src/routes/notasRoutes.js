@@ -1,0 +1,9 @@
+import express from "express";
+import notasController from "../controllers/notasController.js";
+const router = express.Router();
+router.get("/", notasController.getAll);
+router.post("/", notasController.create);
+router.put("/:id", notasController.update);
+router.delete("/:id", notasController.delete);
+router.get("/:id", notasController.getById);
+export default router;
